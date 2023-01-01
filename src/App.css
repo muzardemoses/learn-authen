@@ -1,10 +1,47 @@
-.App {
-  text-align: center;
+@tailwind base;
+
+h1 {
+  @apply text-2xl font-bold;
+}
+h2 {
+  @apply text-xl font-bold;
+}
+h3 {
+  @apply text-lg  font-semibold;
+}
+h4 {
+  @apply text-base font-semibold;
+}
+h5 {
+  @apply text-sm font-semibold;
+}
+h6 {
+  @apply text-xs font-semibold;
+}
+p {
+  @apply text-base;
 }
 
+a {
+  @apply text-blue-600 underline;
+}
+
+
+@tailwind components;
+
+@tailwind utilities;
+
+
+
+.App {
+  font-family: 'Chivo Mono', monospace;
+}
+
+
 .App-logo {
-  height: 40vmin;
+  height: 30vmin;
   pointer-events: none;
+  margin: 0 auto;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -13,16 +50,7 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+
 
 .App-link {
   color: #61dafb;
@@ -36,3 +64,8 @@
     transform: rotate(360deg);
   }
 }
+
+
+
+/* animate from left to right  */
+

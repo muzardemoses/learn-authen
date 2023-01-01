@@ -1,16 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import RegisterPage from "./register";
+import "./App.css";
+
+import { Route, Routes } from "react-router-dom";
+import Home from "./home";
+import TodoPage from "./todo";
+import Header from "./header";
+import SignIn from "./sign-in";
+import Settings from "./settings";
+import Profile from "./profile";
 
 function App() {
   return (
-    <div className="App">
-      <h1>
-        Learning Google Authentication
-      </h1>
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Ask me what to do and I will do it. 
-        </p>
+    <div className=" text-center text-indigo-700 App">
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/register" element={<RegisterPage />} />
+        <Route path="/todo" element={<TodoPage />} />
+        <Route path="/sign-in" element={<SignIn />} />
+        <Route path="/settings" element={<Settings />} />
+        <Route path="/profile" element={<Profile />} />
+      </Routes>
     </div>
   );
 }
